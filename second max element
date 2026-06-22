@@ -1,0 +1,22 @@
+public class Main
+{
+    static int max(){
+       int arr[]={225,2,88,3,10,102,9,99};
+       int mx=Integer.MIN_VALUE;
+       int mx2=Integer.MIN_VALUE;
+       for(int i=0;i<arr.length;i++){
+           if(arr[i]>mx){
+               mx2=mx;//second _max
+               mx=arr[i];
+           }
+           else if(arr[i]>mx2 && arr[i]<mx){
+               mx2=arr[i];
+           }
+       }
+       return mx2;
+    }
+	public static void main(String[] args) {
+		int result=Main.max();
+		System.out.println("Second Max "+result);
+	}
+}
